@@ -1,6 +1,13 @@
-const saveBtn = document.querySelector('.editor button[data-action="save"]');
-const closeBtn = document.querySelector('.editor button[data-action="close"]');
+const mainTitle = document.querySelector(".mainH1");
 
-console.log(saveBtn.dataset.action); //save
-console.log(closeBtn.dataset.action); //close
+const heading = document.createElement("p");
+heading.classList.add("title");
+heading.style.fontSize = "12px";
+heading.textContent = "I add this text from JS";
+mainTitle.append(heading);
+console.log(heading); // <h1 class="title">This is a heading</h1>
 
+const image = document.createElement("img");
+image.src = "https://picsum.photos/id/11/320/240";
+image.alt = "Nature";
+console.log(image); // <img src="https://picsum.photos/id/11/320/240" alt="Nature" />
