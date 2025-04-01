@@ -14,13 +14,20 @@ console.log(image); // <img src="https://picsum.photos/id/11/320/240" alt="Natur
 mainTitle.append(heading, image, heading);
 
 const button = document.querySelector(".my-button");
+const addBtn = document.querySelector(".add-l");
+const removeBtn = document.querySelector(".remove-l");
 
 function click(){
     console.log("click");
 }
-function click2(){
-    console.log("click#2");
+function add(){
+    button.addEventListener("click", click);
+    console.log("add listener");
+}
+function remove(){
+        button.removeEventListener("click", click);
+    console.log("remove listener");
 }
 
-button.addEventListener("click", click);
-button.addEventListener("click", click2);
+addBtn.addEventListener("click", add);
+removeBtn.addEventListener("click", remove);
