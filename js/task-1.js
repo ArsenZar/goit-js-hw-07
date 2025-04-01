@@ -18,5 +18,9 @@ const button = document.querySelector(".my-button");
 function click(){
     console.log("click");
 }
+function click2(){
+    console.log("click#2");
+}
 
 button.addEventListener("click", click);
+button.addEventListener("click2", click);
