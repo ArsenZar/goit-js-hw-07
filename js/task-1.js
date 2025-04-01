@@ -13,30 +13,53 @@ console.log(image); // <img src="https://picsum.photos/id/11/320/240" alt="Natur
 
 mainTitle.append(heading, image, heading);
 
+// buttons
+
 const button = document.querySelector(".my-button");
 const addBtn = document.querySelector(".add-l");
 const removeBtn = document.querySelector(".remove-l");
 
 function click(event){
-    console.log("click, info: ", event.currentTarget);
+    //console.log("click, info: ", event.currentTarget);
 }
 function add(){
     button.addEventListener("click", click);
-    console.log("add listener");
+    //console.log("add listener");
 }
 function remove(){
         button.removeEventListener("click", click);
-    console.log("remove listener");
+    //console.log("remove listener");
 }
 document.addEventListener("keydown", event => {
-  console.log("Keydown: ", event);
+  //console.log("Keydown: ", event);
 });
 document.addEventListener("keydown", event => {
-  console.log("key: ", event.key);
-  console.log("code: ", event.code);
+  //console.log("key: ", event.key);
+  //console.log("code: ", event.code);
 });
-
-
 
 addBtn.addEventListener("click", add);
 removeBtn.addEventListener("click", remove);
+
+// form
+
+const registerForm = document.querySelector(".form");
+
+registerForm.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const login = form.elements.login.value;
+  const password = form.elements.password.value;
+  
+  if (login === "" || password === "") {
+    return console.log("Please fill in all the fields!");
+  }
+
+  console.log(`Login: ${login}, Password: ${password}`);
+  form.reset();
+}
+
+
+
