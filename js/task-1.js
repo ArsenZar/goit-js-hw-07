@@ -11,4 +11,12 @@ image.src = "https://picsum.photos/id/11/320/240";
 image.alt = "Nature";
 console.log(image); // <img src="https://picsum.photos/id/11/320/240" alt="Nature" />
 
-mainTitle.append(heading, image);
+mainTitle.append(heading, image, heading);
+
+const button = document.querySelector(".my-button");
+
+function click(){
+    console.log("click");
+}
+
+button.addEventListener("click", click);
