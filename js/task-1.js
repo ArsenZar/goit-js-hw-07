@@ -23,4 +23,4 @@ function click2(){
 }
 
 button.addEventListener("click", click);
-button.addEventListener("click2", click);
+button.addEventListener("click", click2);
