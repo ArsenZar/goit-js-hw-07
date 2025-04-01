@@ -28,6 +28,10 @@ function remove(){
         button.removeEventListener("click", click);
     console.log("remove listener");
 }
+document.addEventListener("keydown", event => {
+  console.log("Keydown: ", event);
+});
+
 
 addBtn.addEventListener("click", add);
 removeBtn.addEventListener("click", remove);
