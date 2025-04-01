@@ -17,8 +17,8 @@ const button = document.querySelector(".my-button");
 const addBtn = document.querySelector(".add-l");
 const removeBtn = document.querySelector(".remove-l");
 
-function click(){
-    console.log("click");
+function click(event){
+    console.log("click, info: ", event.currentTarget);
 }
 function add(){
     button.addEventListener("click", click);
