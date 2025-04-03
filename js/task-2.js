@@ -24,11 +24,8 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
-
+/*
 const gallery = document.querySelector(".gallery");
-
-
-console.log(gallery.innerHTML);
 
 images.forEach(element => {
   const elem = document.createElement("li");
@@ -39,3 +36,13 @@ images.forEach(element => {
   gallery.append(elem);
   elem.append(img);
 });
+*/
+const gallery = document.querySelector(".gallery");
+
+// Генеруємо розмітку через шаблонний рядок
+const markup = images
+  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" class="gallery-img"></li>`)
+  .join("");
+
+// Додаємо всю розмітку за ОДНУ операцію
+gallery.insertAdjacentHTML("beforeend", markup);
